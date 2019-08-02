@@ -38,36 +38,33 @@
       <div class="col-sm-2"></div>
       <div class="col-sm-10 align-right">
       
-        <?php
+      <?php
+
+      
 
         function calculateBMI($weight, $height){
           $bmi = ($weight / $height / $height) * 10000;
           $bmiRounded = round($bmi, 1);
+          
+            if($bmiRounded <= 18.4){
+              echo $BMIcolor = "#375FEF";
+            }
+            if($bmiRounded >= 18.5 && $bmiRounded <= 24.9){
+              echo $BMIcolor = "#39C117";
+            }
+            if($bmiRounded >= 25 && $bmiRounded <= 29.9){
+              echo $BMIcolor = "#DFAE23";
+            }
+            if($bmiRounded >= 30 && $bmiRounded <= 39.9){
+              echo $BMIcolor = "#F68A33";
+            }
+            else {
+              echo $BMIcolor = "#330906";
+            }
 
-          echo "<h2 style='color: ${calculateBMIColor($bmiRounded)}'>Your BMI is ${bmiRounded}</h2>";
+          echo "<h2 style='color:" . $BMIcolor . "'>Your BMI is ${bmiRounded}</h2>";
         }
 
-        function calculateBMIColor($bmiRounded){
-          if($bmiRounded <= 18.4){
-            echo "#375FEF";
-          }
-          if($bmiRounded >= 18.5 && $bmiRounded <= 24.9){
-            echo "#39C117";
-          }
-          if($bmiRounded >= 25 && $bmiRounded <= 29.9){
-            echo "#DFAE23";
-          }
-          if($bmiRounded >= 30 && $bmiRounded <= 39.9){
-            echo "#F68A33";
-          }
-          else {
-            echo "#330906";
-          }
-        }
-
-        function calculateIdealWeight($height){
-
-        }
 
         if(isset($_POST['calculate'])){
           if (!isset($_POST['weight'])) {
@@ -84,9 +81,7 @@
 
           calculateBMI($weight, $height);
         }
-
-        ?>
-      
+    ?>
     </div>
     </div>
   </div>
