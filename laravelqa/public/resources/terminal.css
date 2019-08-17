@@ -1,0 +1,84 @@
+body  {
+  font-family: monospace;
+  color:  limegreen;
+  background: black;
+
+}
+
+h1, h2, h3, h4, h5 {
+  text-decoration: underline;
+}
+
+form {
+  min-width: 80%;
+}
+
+
+.question + .answer {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  background: black;
+  color:limegreen;
+  font-size: 16px;
+  border: solid 4px limegreen;
+  border-radius: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+
+.question {
+  white-space: normal;
+  text-align: justify;
+  -moz-text-align-last: center; /* Firefox 12+ */
+  text-align-last: center;
+}
+
+.heading {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.submit {
+  background-color: limegreen;
+  border: none;
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+:focus {
+  outline:0;
+}
+
+footer {
+
+}
